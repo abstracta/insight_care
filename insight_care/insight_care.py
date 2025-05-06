@@ -1,6 +1,6 @@
 import gradio as gr
-from ai_pocs.insight_care import insight_care_prompts
-from ai_pocs.insight_care.insight_care_states import IntroState
+from insight_care import insight_care_prompts
+from insight_care.insight_care_states import IntroState
 
 
 def build_gui():

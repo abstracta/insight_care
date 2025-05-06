@@ -5,7 +5,6 @@
       "version": "latest",
       "disable_plugin": true
     },
-    "terraform" : "latest",
     "poetryPlugins.poetry-plugin-export":"latest"
   },
   "shell": {
@@ -14,11 +13,8 @@
         "poetry install",
         "[ -e '.env' ] || (cp sample.env .env && echo '.env file has been created, PLEASE CHECK THAT ALL PROPERTIES ARE PROPERLY SET!')"
       ],
-      "test": [
-        "poetry run pytest -n 5 -x --log-cli-level=DEBUG"
-      ],
-      "pocs": [
-        "poetry run gradio ai_pocs/__main__.py"
+      "insight_care": [
+        "poetry run python -m insight_care"
       ]
     }
   }

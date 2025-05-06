@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import List, Tuple, Dict, Type
 import openai
 import os
-from ai_pocs.insight_care.insight_care_prompts import Prompts, Messages, Continue
+from insight_care.insight_care_prompts import Prompts, Messages, Continue
 
 
 class State(ABC):
