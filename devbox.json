@@ -1,0 +1,25 @@
+{
+  "packages": {
+    "python": "latest",
+    "poetry": {
+      "version": "latest",
+      "disable_plugin": true
+    },
+    "terraform" : "latest",
+    "poetryPlugins.poetry-plugin-export":"latest"
+  },
+  "shell": {
+    "scripts": {
+      "install": [
+        "poetry install",
+        "[ -e '.env' ] || (cp sample.env .env && echo '.env file has been created, PLEASE CHECK THAT ALL PROPERTIES ARE PROPERLY SET!')"
+      ],
+      "test": [
+        "poetry run pytest -n 5 -x --log-cli-level=DEBUG"
+      ],
+      "pocs": [
+        "poetry run gradio ai_pocs/__main__.py"
+      ]
+    }
+  }
+}

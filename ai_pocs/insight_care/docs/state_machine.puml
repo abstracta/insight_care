@@ -1,0 +1,43 @@
+@startuml
+
+[*] --> INTRO
+
+INTRO --> AGREEMENT : Accept
+INTRO --> INTRO : Re question
+INTRO --> TERMINATE : Negative answer
+AGREEMENT --> EXPLANATION : Accept
+AGREEMENT --> AGREEMENT : Re question
+AGREEMENT --> TERMINATE : Negative answer
+EXPLANATION --> WHO_1 : Accept
+EXPLANATION --> EXPLANATION : Re question
+EXPLANATION --> TERMINATE : Negative answer
+WHO_1 --> WHO_1_INQUIRE : Identify ranking
+WHO_1 --> WHO_1 : Re question ranking
+WHO_1_INQUIRE --> WHO_1_INQUIRE : Keep inquiring
+WHO_1_INQUIRE --> WHO_2 : Continue to next question
+WHO_2 --> WHO_2_INQUIRE : Identify ranking
+WHO_2 --> WHO_2 : Re question ranking
+WHO_2_INQUIRE --> WHO_2_INQUIRE : Keep inquiring
+WHO_2_INQUIRE --> WHO_3 : Continue to next question
+WHO_3 --> WHO_3_INQUIRE : Identify ranking
+WHO_3 --> WHO_3 : Re question ranking
+WHO_3_INQUIRE --> WHO_3_INQUIRE : Keep inquiring
+WHO_3_INQUIRE --> WHO_4 : Continue to next question
+WHO_4 --> WHO_4_INQUIRE : Identify ranking
+WHO_4 --> WHO_4 : Re question ranking
+WHO_4_INQUIRE --> WHO_4_INQUIRE : Keep inquiring
+WHO_4_INQUIRE --> WHO_5 : Continue to next question
+WHO_5 --> WHO_5_INQUIRE : Identify ranking
+WHO_5 --> WHO_5 : Re question ranking
+WHO_5_INQUIRE --> WHO_5_INQUIRE : Keep inquiring
+WHO_5_INQUIRE --> ASSESSMENT : Continue to assessment
+ASSESSMENT --> ASSESSMENT : Keep talking
+ASSESSMENT --> REPORT : Continue to report
+REPORT --> REPORT : Keep talking
+REPORT --> CLOSE : Continue to close
+CLOSE --> CLOSE : Keep talking
+CLOSE --> INTRO : Finish chat
+TERMINATE --> INTRO : Any chat
+
+
+@enduml
